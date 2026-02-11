@@ -1,0 +1,3 @@
+# Netlify — sitio estático (solo index.html)
+[build]
+  publish = "."
