@@ -932,6 +932,70 @@
       color: var(--esmeralda);
     }
     body.nav-mobile-body-open { overflow: hidden; }
+
+    /* Footer */
+    .site-footer {
+      background: var(--gris-oscuro);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 3rem 0 2rem;
+    }
+    .footer-contenido {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 640px) {
+      .footer-contenido { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 900px) {
+      .footer-contenido { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    .footer-marca h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--blanco);
+      margin-bottom: 0.5rem;
+    }
+    .footer-marca p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.5;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 1rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color var(--transicion);
+    }
+    .footer-col a:hover { color: var(--menta); }
+    .footer-contacto a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--menta);
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
   </style>
 </head>
 <body>
@@ -1186,9 +1250,9 @@
       <h2 class="titulo-seccion animar-entrada" id="titulo-testimonios">Lo que dicen <span>quienes cultivaron conmigo</span></h2>
       <div class="grid-testimonios">
         <blockquote class="testimonio animar-entrada delay-1">
-          <p class="cita">"Empecé a cultivar en mi patio. El micelio llegó listo y Jona me guió en cada paso. Mi primera cosecha de ostras salió bien. Ahora vendo un poco en el mercado local."</p>
+          <p class="cita">"Empecé a cultivar en mi patio. El micelio llegó listo y Jona me guió en cada paso. Mi primera cosecha de ostras salió bien. Ahora vendo un poco en el mercadito de la colonia."</p>
           <footer class="autor">
-            <span class="autor-foto"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=104&h=104&fit=crop&crop=face" alt="" width="52" height="52" loading="lazy"></span>
+            <span class="autor-foto"><img src="fungi1.png" alt="" width="52" height="52" loading="lazy"></span>
             <div>
               <span class="nombre">Carlos M.</span>
               <span class="empresa">Cultivador en casa, El Salvador</span>
@@ -1198,30 +1262,10 @@
         <blockquote class="testimonio animar-entrada delay-2">
           <p class="cita">"Quería algo para consumo familiar y para vender. La mentoría fue clara y adaptada a mi presupuesto. El soporte cuando tuve dudas hizo la diferencia."</p>
           <footer class="autor">
-            <span class="autor-foto"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=104&h=104&fit=crop&crop=face" alt="" width="52" height="52" loading="lazy"></span>
+            <span class="autor-foto"><img src="fungi2.jpg" alt="" width="52" height="52" loading="lazy"></span>
             <div>
               <span class="nombre">María L.</span>
               <span class="empresa">Emprendedora, El Salvador</span>
-            </div>
-          </footer>
-        </blockquote>
-        <blockquote class="testimonio animar-entrada delay-3">
-          <p class="cita">"Cultivo shiitake para mi familia y para vender en la feria. El micelio en grano es de buena calidad y el acompañamiento me ayudó a evitar errores al inicio."</p>
-          <footer class="autor">
-            <span class="autor-foto"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=104&h=104&fit=crop&crop=face" alt="" width="52" height="52" loading="lazy"></span>
-            <div>
-              <span class="nombre">Roberto T.</span>
-              <span class="empresa">Productor local</span>
-            </div>
-          </footer>
-        </blockquote>
-        <blockquote class="testimonio animar-entrada delay-4">
-          <p class="cita">"Me interesaban los hongos medicinales. Jona me explicó el proceso y me envió el micelio. El soporte continuo me dio confianza para seguir."</p>
-          <footer class="autor">
-            <span class="autor-foto"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=104&h=104&fit=crop&crop=face" alt="" width="52" height="52" loading="lazy"></span>
-            <div>
-              <span class="nombre">Ana R.</span>
-              <span class="empresa">Cultivadora en casa</span>
             </div>
           </footer>
         </blockquote>
@@ -1231,16 +1275,46 @@
 
   <section id="cta-final" aria-labelledby="titulo-cta">
     <div class="contenedor">
-      <h2 class="titulo-seccion" id="titulo-cta">Empieza hoy tu <span>sistema de cultivo</span></h2>
+      <h2 class="titulo-seccion" id="titulo-cta">Empezá hoy tu <span>sistema de cultivo</span></h2>
       <p class="motivo">Agenda tu sesión inicial. Ordena tu primer lote de micelio. Te guío paso a paso.</p>
-      <!-- Reemplaza 503XXXXXXXX por tu número WhatsApp con código de país (ej: 50371234567) -->
-      <a href="https://wa.me/503XXXXXXXX?text=Hola%20Jona%2C%20quiero%20agendar%20mi%20sesi%C3%B3n%20inicial%20y%20ordenar%20micelio%20para%20cultivar%20hongos" class="cta-principal" target="_blank" rel="noopener noreferrer">Agenda sesión + Ordena micelio</a>
+      <a href="https://wa.me/50376905422?text=Hola%20Jona%2C%20quiero%20agendar%20mi%20sesi%C3%B3n%20inicial%20y%20ordenar%20micelio%20para%20cultivar%20hongos" class="cta-principal" target="_blank" rel="noopener noreferrer">Agenda tu diagnostico inicial u Ordena micelio</a>
     </div>
   </section>
 
+  <footer class="site-footer">
+    <div class="contenedor">
+      <div class="footer-contenido">
+        <div class="footer-marca">
+          <h3>Jonathan Gomez · Cultivo de hongos</h3>
+          <p>Micelio en grano y mentoría personalizada para cultivar hongos en casa. El Salvador y Centroamérica.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#problema-oportunidad">El problema</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#para-quien">Para quién</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#cta-final">Empezar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contacto">
+          <h4>Contacto</h4>
+          <a href="https://wa.me/50376905422?text=Hola%20Jona%2C%20tengo%20una%20consulta" target="_blank" rel="noopener noreferrer">WhatsApp · +503 7690 5422</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Jonathan Gomez. Micelio y mentoría en cultivo de hongos.
+      </div>
+    </div>
+  </footer>
+
   <div class="cta-sticky" id="cta-sticky" aria-hidden="true">
     <div class="contenedor">
-      <a href="#cta-final" class="cta-principal">Agenda sesión + Ordena micelio</a>
+      <a href="#cta-final" class="cta-principal">Agenda tu diagnostico inicial</a>
     </div>
   </div>
 
@@ -1248,10 +1322,13 @@
     (function() {
       var sticky = document.getElementById('cta-sticky');
       var hero = document.getElementById('hero');
+      var ctaFinal = document.getElementById('cta-final');
       if (!sticky || !hero) return;
       var heroBottom = hero.offsetHeight;
       function updateSticky() {
-        if (window.scrollY > heroBottom * 0.6) sticky.classList.add('visible');
+        var inCtaSection = ctaFinal && ctaFinal.getBoundingClientRect().top <= window.innerHeight;
+        var pastHero = window.scrollY > heroBottom * 0.6;
+        if (pastHero && !inCtaSection) sticky.classList.add('visible');
         else sticky.classList.remove('visible');
       }
       window.addEventListener('scroll', updateSticky, { passive: true });
